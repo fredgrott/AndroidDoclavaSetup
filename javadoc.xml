@@ -15,7 +15,7 @@
         <javadoc access="public" 
         	destdir="project.docs/javadoc"
         	bootclasspathref="bootme.path"
-        	docletpath="/home/fredgrott/git/GITHUB/AndroidDoclavaSetup/doclet.assets/doclava-1.0.5.jar"
+        	docletpath="doclet.assets/doclava-1.0.5.jar"
         	sourcepath="src:gen">
             <doclet name="com.google.doclava.Doclava" >
             	<param name="-stubs" value="bin/stubs" />

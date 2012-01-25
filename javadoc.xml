@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+	
+	<path id="bootme.path">
+		<fileset dir="/home/fredgrott/opt/android/android-sdk-linux/platforms/android-4">
+			<include name="android.jar"/>
+		</fileset>
+		<fileset dir="/usr/lib/jvm/default-java/jre/lib">
+	         <include name="rt.jar"/>
+		</fileset>
+	</path>
+	
+	
+    <target name="javadoc">
+        <javadoc access="public" 
+        	destdir="project.docs/javadoc"
+        	bootclasspathref="bootme.path"
+        	docletpath="/home/fredgrott/git/GITHUB/AndroidDoclavaSetup/doclet.assets/doclava-1.0.5.jar"
+        	sourcepath="src:gen">
+            <doclet name="com.google.doclava.Doclava" >
+            	<param name="-stubs" value="bin/stubs" />
+            	<param name="-hdf"/> 
+                <param name="project.name"/> 
+                <param name="AndroidDoclavaSetup"/>
+            	<param name="-templatedir"/>
+            	<param name="doclet.assets/assets"/>
+          </doclet>
+        </javadoc>
+    </target>
+</project>
